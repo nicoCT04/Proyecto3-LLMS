@@ -9,6 +9,7 @@ import fcntl
 import html
 import os
 import time
+import uuid
 from datetime import datetime
 
 import httpx
@@ -70,21 +71,30 @@ def formatear(r: dict) -> str:
         filas += [f"{ICONO[a['nivel']]} {html.escape(a['mensaje'])}" for a in r["alertas"]]
     if r.get("banderas"):
         filas.append("")
-        filas += [f"<i>Revisar: {html.escape(b)}</i>" for b in r["banderas"][:2]]
+        filas += [f"⚠️ <b>Confirmar:</b> {html.escape(b)}" for b in r["banderas"][:2]]
+    filas += ["", "<i>¿Está bien lo que entendí?</i>"]
     return "\n".join(filas)
+
+
+def botones(clave: str) -> dict:
+    return {"inline_keyboard": [[{"text": "✅ Guardar", "callback_data": f"g:{clave}"},
+                                 {"text": "❌ Descartar", "callback_data": f"d:{clave}"}]]}
 
 
 class Bot:
     def __init__(self):
         self.http = httpx.Client(timeout=40)
+        # reportes que esperan que el caporal los confirme (en memoria: si el bot se reinicia, expiran)
+        self.pendientes: dict[str, dict] = {}
 
     def llamar(self, metodo: str, **datos):
         r = self.http.post(f"{API}/{metodo}", json=datos)
         r.raise_for_status()
         return r.json()["result"]
 
-    def responder(self, chat: int, texto: str):
-        self.llamar("sendMessage", chat_id=chat, text=texto, parse_mode="HTML")
+    def responder(self, chat: int, texto: str, botones: dict | None = None):
+        extra = {"reply_markup": botones} if botones else {}
+        return self.llamar("sendMessage", chat_id=chat, text=texto, parse_mode="HTML", **extra)
 
     def audio(self, file_id: str) -> bytes:
         ruta = self.llamar("getFile", file_id=file_id)["file_path"]
@@ -109,10 +119,35 @@ class Bot:
         r = extraer(texto, reportado, CONFIG_APP)
         print(f"{reportado} {'audio' if voz else 'texto'} -> lote {r['reporte'].get('lote')}, "
               f"{len(r['alertas'])} alertas, {r['traza']['latencia_total_s']:.1f} s")
-        self.responder(chat, formatear(r))
-        if not r["reporte"].get("fuera_de_tema"):
-            # sin nombre de la persona: solo el canal (privacidad); queda sin confirmar en el Tablero
-            almacen.guardar(texto, reportado, "Telegram", r, confirmado=False)
+        if r["reporte"].get("fuera_de_tema"):
+            return self.responder(chat, formatear(r))
+        # nada se guarda hasta que la persona revise lo extraído y toque «Guardar»
+        clave = uuid.uuid4().hex[:12]
+        cuerpo = formatear(r)
+        self.pendientes[clave] = {"texto": texto, "reportado": reportado, "resultado": r, "cuerpo": cuerpo}
+        self.responder(chat, cuerpo, botones(clave))
+
+    def decidir(self, cb: dict):
+        """El caporal tocó Guardar o Descartar debajo de un reporte."""
+        accion, _, clave = (cb.get("data") or "").partition(":")
+        msg = cb["message"]
+        p = self.pendientes.pop(clave, None)
+        if p is None:
+            self.llamar("answerCallbackQuery", callback_query_id=cb["id"],
+                        text="Este reporte ya no está pendiente; mande la nota de nuevo.")
+            return self.llamar("editMessageReplyMarkup", chat_id=msg["chat"]["id"],
+                               message_id=msg["message_id"], reply_markup={"inline_keyboard": []})
+        if accion == "g":
+            # sin nombre de la persona: solo el canal (privacidad)
+            almacen.guardar(p["texto"], p["reportado"], "Telegram", p["resultado"], confirmado=True)
+            final, aviso = "✅ <b>Guardado en el tablero.</b>", "Guardado"
+        else:
+            final, aviso = "❌ <b>Descartado.</b> Mándeme la nota otra vez, más clara.", "Descartado"
+        self.llamar("answerCallbackQuery", callback_query_id=cb["id"], text=aviso)
+        cuerpo = p["cuerpo"].rsplit("\n\n<i>¿Está bien", 1)[0]
+        self.llamar("editMessageText", chat_id=msg["chat"]["id"], message_id=msg["message_id"],
+                    text=f"{cuerpo}\n\n{final}", parse_mode="HTML")
+        print(f"{p['reportado']} {aviso.lower()} por el usuario")
 
     def correr(self):
         yo = self.llamar("getMe")
@@ -121,8 +156,14 @@ class Bot:
         while True:
             try:
                 for u in self.llamar("getUpdates", offset=desde, timeout=30,
-                                     allowed_updates=["message"]):
+                                     allowed_updates=["message", "callback_query"]):
                     desde = u["update_id"] + 1
+                    if "callback_query" in u:
+                        try:
+                            self.decidir(u["callback_query"])
+                        except Exception as err:  # noqa: BLE001
+                            print("error al confirmar:", err)
+                        continue
                     if "message" not in u:
                         continue
                     try:
