@@ -1,0 +1,23 @@
+# secretos
+.env
+
+# entornos y dependencias
+.venv/
+__pycache__/
+frontend/node_modules/
+frontend/dist/
+
+# datos locales de la app
+data/bitacora.db
+
+# editor / sistema
+.DS_Store
+.claude/
+
+# registros locales
+*.log
+.pytest_cache/
+data/.bot_telegram.lock
+
+# material interno del equipo (guion de la feria, prompt de diseño)
+docs/
