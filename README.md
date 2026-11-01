@@ -158,7 +158,7 @@ Proyecto3-LLMS/
 │   ├── evaluar.py, metricas.py, tabla_readme.py
 │   └── resultados/             predicciones por iteración, resumen.csv, registro.csv
 ├── notebook/proyecto3.ipynb    análisis de datos, pipeline y resultados
-├── reports/                    figuras, tablas, diagrama y póster (poster.html)
+├── reports/                    figuras, tablas y diagrama de arquitectura
 └── tests/                      pruebas de las partes deterministas
 ```
 

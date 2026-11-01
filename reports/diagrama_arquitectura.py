@@ -1,4 +1,4 @@
-"""Dibuja reports/arquitectura.png (diagrama del pipeline para el informe y el póster)."""
+"""Dibuja reports/arquitectura.png (diagrama del pipeline para el informe y la presentación)."""
 from pathlib import Path
 
 import matplotlib.pyplot as plt
