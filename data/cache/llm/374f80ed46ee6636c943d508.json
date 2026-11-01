@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-03\",\n  \"tipo_corte\": \"mecanizado\",\n  \"cantidad_cortada\": {\n    \"valor\": 20.0,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"cosechadora\",\n      \"horas\": 1.0,\n      \"causa\": \"cambio de cuchillas\"\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"Corte mecanizado en lote F-03 de 20 jaulas, con paro de 1 hora en cosechadora.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1968,
+ "tokens_salida": 201,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.13,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "```json\n{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-47\",\n  \"tipo_corte\": \"mecanizado\",\n  \"cantidad_cortada\": {\n    \"valor\": 400,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"tractor\",\n      \"horas\": null\n    }\n  ],\n  \"incidentes\": []\n}\n```",
+ "modelo": "gemma-4-26b-a4b-it",
+ "tokens_entrada": 2128,
+ "tokens_salida": 152,
+ "tokens_razonamiento": 1639,
+ "latencia_s": 38.297,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

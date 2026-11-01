@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-27\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 85, \"unidad\": \"toneladas\"}, \"cortadores\": 20, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [{\"tipo\": \"lluvia\", \"descripcion\": \"aguacero\"}], \"resumen\": \"Lluvia detuvo el corte manual en lote 27 tras 85 toneladas.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2034,
+ "tokens_salida": 132,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.044,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

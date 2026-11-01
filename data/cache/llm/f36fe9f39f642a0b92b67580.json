@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-45\",\n  \"tipo_corte\": \"mecanizado\",\n  \"cantidad_cortada\": {\n    \"valor\": 17,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"03:00\",\n  \"cana_pendiente\": {\n    \"valor\": 60,\n    \"unidad\": \"toneladas\"\n  },\n  \"paros\": [\n    {\n      \"equipo\": \"cosechadora\",\n      \"horas\": 3.0,\n      \"causa\": \"falla electrica\"\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"Lote F-45: Cosechadora sacó 17 jaulas, con 3 horas de paro por falla eléctrica. 60 toneladas quemadas pendientes de cortar. Quema hoy a las 03:00.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1183,
+ "tokens_salida": 248,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.246,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

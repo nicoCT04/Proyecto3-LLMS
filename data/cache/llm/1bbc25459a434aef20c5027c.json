@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-17\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": {\n    \"valor\": 110,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"lluvia\",\n      \"descripcion\": \"Lluvia desde la 1:00 p.m. suspendió las labores de corte.\"\n    }\n  ],\n  \"resumen\": \"Se suspendió el corte en el lote F-17 por lluvia a la 1:00 p.m., logrando cortar 110 toneladas.\"\n}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1170,
+ "tokens_salida": 207,
+ "tokens_razonamiento": 637,
+ "latencia_s": 4.235,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

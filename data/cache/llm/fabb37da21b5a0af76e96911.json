@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-25\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 190,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 28,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"accidente\",\n      \"descripcion\": \"cortador se lastimo el pie con una cepa\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2056,
+ "tokens_salida": 160,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.068,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-13\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 280, \"unidad\": \"toneladas\"}, \"cortadores\": null, \"quema_dia\": \"hoy\", \"quema_hora\": \"04:30\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Corte manual de 280 toneladas en Finca El Carmen con quema matutina a las 04:30.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1990,
+ "tokens_salida": 131,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.102,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"12\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": {\n    \"valor\": null,\n    \"unidad\": null\n  },\n  \"cortadores\": null,\n  \"quema_dia\": \"ayer\",\n  \"quema_hora\": \"03:30\",\n  \"cana_pendiente\": {\n    \"valor\": 40,\n    \"unidad\": \"toneladas\"\n  },\n  \"paros\": [\n    {\n      \"equipo\": \"alzadora\",\n      \"horas\": null\n    }\n  ],\n  \"incidentes\": []\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 184,
+ "tokens_salida": 163,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.879,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

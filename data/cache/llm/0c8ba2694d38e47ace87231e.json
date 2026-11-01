@@ -1,0 +1,13 @@
+{
+ "texto": "```json\n{\"fuera_de_tema\": true, \"lote\": null, \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": []}\n```",
+ "modelo": "gemma-4-26b-a4b-it",
+ "tokens_entrada": 2036,
+ "tokens_salida": 77,
+ "tokens_razonamiento": 509,
+ "latencia_s": 12.94,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

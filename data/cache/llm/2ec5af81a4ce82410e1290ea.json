@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": null, \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": \"ayer\", \"quema_hora\": \"22:00\", \"cana_pendiente\": {\"valor\": 80, \"unidad\": \"toneladas\"}, \"paros\": [], \"incidentes\": [], \"resumen\": \"80 toneladas de ca\\u00F1a pendientes en Finca Santa Teresa tras quema a las 10 pm de anoche.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1911,
+ "tokens_salida": 127,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.063,
+ "desde_cache": false,
+ "intentos": 3,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

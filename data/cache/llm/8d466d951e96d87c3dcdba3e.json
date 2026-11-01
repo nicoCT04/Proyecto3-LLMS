@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-15\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 260.0, \"unidad\": \"toneladas\"}, \"cortadores\": 38, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [{\"tipo\": \"accidente\", \"descripcion\": \"muchacho se desmayo por el calor, atendido por paramedico\"}], \"resumen\": \"Corte manual en lote F-15 con 260 toneladas y 38 cortadores, un incidente de desmayo.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1871,
+ "tokens_salida": 157,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.388,
+ "desde_cache": false,
+ "intentos": 4,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

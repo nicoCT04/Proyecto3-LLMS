@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": null, \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": \"ayer\", \"quema_hora\": \"20:00\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Reporte de Lote 2 y Lote 3 sin novedad, quema en Lote 2 ayer a las 20:00.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1892,
+ "tokens_salida": 115,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.979,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-11\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 22.0, \"unidad\": \"viajes\"}, \"cortadores\": 34, \"quema_dia\": \"hoy\", \"quema_hora\": \"05:15\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Corte manual en F-11 de 22 viajes con 34 cortadores, quema a las 05:15.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1894,
+ "tokens_salida": 135,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.951,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

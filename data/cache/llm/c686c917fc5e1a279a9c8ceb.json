@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-14\",\"tipo_corte\":\"manual\",\"cantidad_cortada\":{\"valor\":290,\"unidad\":\"toneladas\"},\"cortadores\":40,\"quema_dia\":\"hoy\",\"quema_hora\":\"04:00\",\"cana_pendiente\":null,\"paros\":[],\"incidentes\":[],\"resumen\":\"Se reporta el corte manual de 290 toneladas en el lote F-14 con 40 cortadores, tras quema efectuada hoy a las 04:00 sin incidentes.\"}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1176,
+ "tokens_salida": 129,
+ "tokens_razonamiento": 662,
+ "latencia_s": 5.028,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

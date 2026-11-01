@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-36\",\"tipo_corte\":\"manual\",\"cantidad_cortada\":{\"valor\":150,\"unidad\":\"toneladas\"},\"cortadores\":25,\"quema_dia\":null,\"quema_hora\":null,\"cana_pendiente\":null,\"paros\":[],\"incidentes\":[{\"tipo\":\"plaga\",\"descripcion\":\"Chinche salivosa fuerte en la orilla del canal\"}],\"resumen\":\"Lote F-36: 150 toneladas cortadas manualmente con 25 cortadores y reporte de chinche salivosa.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1172,
+ "tokens_salida": 131,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.869,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

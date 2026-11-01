@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-03\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 20.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"cosechadora\", \"horas\": 1.0, \"causa\": \"cambio de cuchillas\"}], \"incidentes\": [], \"resumen\": \"Corte mecanizado en lote F-03 con 20 jaulas y paro de 1 hora en cosechadora.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2060,
+ "tokens_salida": 153,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.17,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

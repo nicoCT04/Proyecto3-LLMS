@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-26\",\"tipo_corte\":\"mecanizado\",\"cantidad_cortada\":{\"valor\":15,\"unidad\":\"jaulas\"},\"cortadores\":null,\"quema_dia\":\"hoy\",\"quema_hora\":\"12:00\",\"cana_pendiente\":null,\"paros\":[{\"equipo\":\"cosechadora\",\"horas\":0.75,\"causa\":null}],\"incidentes\":[],\"resumen\":\"Corte mecanizado de 15 jaulas en lote F-26 tras quema a mediodía, reportando paro de 45 minutos en cosechadora.\"}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1175,
+ "tokens_salida": 140,
+ "tokens_razonamiento": 835,
+ "latencia_s": 5.456,
+ "desde_cache": false,
+ "intentos": 7,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

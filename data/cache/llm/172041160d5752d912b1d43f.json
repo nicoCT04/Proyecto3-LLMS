@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":null,\"tipo_corte\":null,\"cantidad_cortada\":null,\"cortadores\":null,\"quema_dia\":\"ayer\",\"quema_hora\":\"22:00\",\"cana_pendiente\":{\"valor\":80,\"unidad\":\"toneladas\"},\"paros\":[],\"incidentes\":[],\"resumen\":\"Quedaron 80 toneladas de caña pendiente en Finca Santa Teresa, quemada anoche a las 22:00.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1163,
+ "tokens_salida": 110,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.881,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

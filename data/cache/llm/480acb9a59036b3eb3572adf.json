@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-32\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 0, \"unidad\": \"toneladas\"}, \"cortadores\": 0, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Lote F-32 sin corte hoy por ausencia de cortadores.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2022,
+ "tokens_salida": 110,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.327,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

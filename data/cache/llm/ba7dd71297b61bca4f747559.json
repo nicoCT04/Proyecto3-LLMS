@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-06\",\"tipo_corte\":null,\"cantidad_cortada\":null,\"cortadores\":null,\"quema_dia\":\"anteayer\",\"quema_hora\":\"23:00\",\"cana_pendiente\":{\"valor\":3,\"unidad\":\"jaulas\"},\"paros\":[],\"incidentes\":[],\"resumen\":\"Lote F-06 tiene 3 jaulas pendientes de caña quemada anteayer a las 23:00 sin camión.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1179,
+ "tokens_salida": 113,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.019,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

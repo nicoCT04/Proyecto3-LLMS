@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"34\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": {\n    \"valor\": 250,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 36,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"04:30\",\n  \"cana_pendiente\": {\n    \"valor\": null,\n    \"unidad\": null\n  },\n  \"paros\": [\n    {\n      \"equipo\": \"tractor 3\",\n      \"horas\": 2\n    }\n  ],\n  \"incidentes\": [\n    {\n      \"tipo\": \"mecanico\",\n      \"descripcion\": \"ponchadura de llanta\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 190,
+ "tokens_salida": 200,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.02,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

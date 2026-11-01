@@ -1,0 +1,13 @@
+{
+ "texto": "```json\n{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-06\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": \"anteayer\",\n  \"quema_hora\": \"23:00\",\n  \"cana_pendiente\": {\n    \"valor\": 3.0,\n    \"unidad\": \"jaulas\"\n  },\n  \"paros\": [],\n  \"incidentes\": []\n}\n```",
+ "modelo": "gemma-4-26b-a4b-it",
+ "tokens_entrada": 2127,
+ "tokens_salida": 131,
+ "tokens_razonamiento": 1040,
+ "latencia_s": 25.122,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

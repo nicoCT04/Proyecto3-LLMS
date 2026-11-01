@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-47\",\n  \"tipo_corte\": \"mecanizado\",\n  \"cantidad_cortada\": {\n    \"valor\": 400,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"tractor\",\n      \"horas\": null,\n      \"causa\": \"se apago un ratito\"\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"Corte mecanizado de 400 toneladas en lote F-47 con breve paro de tractor.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1170,
+ "tokens_salida": 191,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.321,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

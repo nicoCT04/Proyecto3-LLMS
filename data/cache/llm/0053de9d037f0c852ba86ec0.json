@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-22\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 300, \"unidad\": \"toneladas\"}, \"cortadores\": 40, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Lote 22 reporta 300 toneladas cortadas por 40 cortadores de forma manual.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1982,
+ "tokens_salida": 122,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.985,
+ "desde_cache": false,
+ "intentos": 2,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

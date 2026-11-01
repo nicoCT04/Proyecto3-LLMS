@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-01\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 200, \"unidad\": \"toneladas\"}, \"cortadores\": 30, \"quema_dia\": \"ayer\", \"quema_hora\": \"20:00\", \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"camion\", \"horas\": 3, \"causa\": \"sin frenos\"}], \"incidentes\": [], \"resumen\": \"Lote F-01 con 30 cortadores, 200 toneladas cortadas, quema ayer a las 20:00 y camión parado 3 horas por frenos.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1937,
+ "tokens_salida": 170,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.505,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

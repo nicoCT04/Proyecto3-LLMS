@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-15\",\"tipo_corte\":\"manual\",\"cantidad_cortada\":{\"valor\":260,\"unidad\":\"toneladas\"},\"cortadores\":38,\"quema_dia\":null,\"quema_hora\":null,\"cana_pendiente\":null,\"paros\":[],\"incidentes\":[{\"tipo\":\"accidente\",\"descripcion\":\"Un cortador se desmayó por golpe de calor y fue atendido por el paramédico\"}],\"resumen\":\"En el lote F-15 se realizaron labores de corte manual cosechando 260 toneladas con 38 cortadores, registrando un incidente por desmayo de calor.\"}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1181,
+ "tokens_salida": 148,
+ "tokens_razonamiento": 681,
+ "latencia_s": 4.905,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

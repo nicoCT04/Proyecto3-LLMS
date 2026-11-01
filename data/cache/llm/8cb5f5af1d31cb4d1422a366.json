@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-38\",\"tipo_corte\":\"manual\",\"cantidad_cortada\":{\"valor\":360,\"unidad\":\"toneladas\"},\"cortadores\":50,\"quema_dia\":\"hoy\",\"quema_hora\":\"03:00\",\"cana_pendiente\":null,\"paros\":[],\"incidentes\":[],\"resumen\":\"Se cortaron 360 toneladas en el lote F-38 con 50 cortadores manuales, tras quema efectuada hoy a las 03:00.\"}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1165,
+ "tokens_salida": 124,
+ "tokens_razonamiento": 639,
+ "latencia_s": 3.688,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-39\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"01:00\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"incendio_no_programado\",\n      \"descripcion\": \"Quema no autorizada a la 1 de la mañana, controlado\"\n    }\n  ],\n  \"resumen\": \"Incendio no programado en lote 39 a la 1:00 ya controlado.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1858,
+ "tokens_salida": 175,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.077,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

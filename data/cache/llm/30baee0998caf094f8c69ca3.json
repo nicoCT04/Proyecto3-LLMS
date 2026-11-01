@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-19\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": \"ayer\",\n  \"quema_hora\": \"23:15\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Quema en lote 19 ayer a las 23:15; inicio de corte hoy.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1162,
+ "tokens_salida": 134,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.031,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

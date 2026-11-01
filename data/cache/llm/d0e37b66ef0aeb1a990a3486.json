@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"6\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": \"antier\",\n  \"quema_hora\": \"23:00\",\n  \"cana_pendiente\": {\n    \"valor\": 3,\n    \"unidad\": \"jaulas\"\n  },\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"demora\",\n      \"descripcion\": \"No ha llegado camión para retirar la caña quemada\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 181,
+ "tokens_salida": 158,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.9,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

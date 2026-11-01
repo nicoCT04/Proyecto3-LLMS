@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-41\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 28.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"cosechadora\", \"horas\": 0.5, \"causa\": \"sobrecalentamiento\"}], \"incidentes\": [], \"resumen\": \"Lote F-41 con corte mecanizado, 28 jaulas sacadas y paro de media hora en cosechadora 2.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1862,
+ "tokens_salida": 155,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.02,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

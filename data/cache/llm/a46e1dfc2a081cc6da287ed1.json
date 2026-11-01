@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-10\",\"tipo_corte\":null,\"cantidad_cortada\":",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1165,
+ "tokens_salida": 30,
+ "tokens_razonamiento": 979,
+ "latencia_s": 6.027,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

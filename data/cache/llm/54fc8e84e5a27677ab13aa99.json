@@ -1,0 +1,13 @@
+{
+ "texto": "```json\n{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-17\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": {\n    \"valor\": 110,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"lluvia\",\n      \"descripcion\": \"llovio desde la 1 de la tarde\"\n    }\n  ]\n}\n```",
+ "modelo": "gemma-4-26b-a4b-it",
+ "tokens_entrada": 2137,
+ "tokens_salida": 161,
+ "tokens_razonamiento": 1346,
+ "latencia_s": 32.49,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

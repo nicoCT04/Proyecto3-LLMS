@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-17\",\"tipo_corte\":\"manual\",\"cantidad_cortada\":{\"valor\":110,\"unidad\":\"toneladas\"},\"cortadores\":null,\"quema_dia\":null,\"quema_hora\":null,\"cana_pendiente\":null,\"paros\":[],\"incidentes\":[{\"tipo\":\"lluvia\",\"descripcion\":\"Llovió desde la 1 de la tarde y se suspendió el corte\"}],\"resumen\":\"Lluvia en lote F-17 suspendió el corte tras 110 toneladas\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1170,
+ "tokens_salida": 124,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.204,
+ "desde_cache": false,
+ "intentos": 4,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

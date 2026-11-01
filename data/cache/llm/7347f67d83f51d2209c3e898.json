@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-31\", \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [{\"tipo\": \"robo_cana\", \"descripcion\": \"robo de caña cortada, como una jaula a las 2 am\"}]}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1861,
+ "tokens_salida": 104,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.733,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

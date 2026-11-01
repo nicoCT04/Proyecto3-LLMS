@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-34\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 250.0,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 36,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"04:30\",\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"tractor\",\n      \"horas\": 2.0,\n      \"causa\": \"llanta\"\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"Lote F-34: 250 toneladas cortadas por 36 cortadores, quema a las 04:30 y paro de tractor por 2 horas.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1878,
+ "tokens_salida": 216,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.317,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

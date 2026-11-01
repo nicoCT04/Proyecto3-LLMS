@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"31\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"Robo\",\n      \"descripcion\": \"Se robaron caña cortada, como una jaula. El guardián dice que fue a las 2 am.\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 173,
+ "tokens_salida": 147,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.918,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": null
+ }
+}

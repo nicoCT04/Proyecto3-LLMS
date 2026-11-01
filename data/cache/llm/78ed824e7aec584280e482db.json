@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-35\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"bomba_riego\",\n      \"horas\": null,\n      \"causa\": \"no arranca desde ayer\"\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"La bomba de riego del lote F-35 no arranca desde ayer y espera revisión del mecánico.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1160,
+ "tokens_salida": 168,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.01,
+ "desde_cache": false,
+ "intentos": 2,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

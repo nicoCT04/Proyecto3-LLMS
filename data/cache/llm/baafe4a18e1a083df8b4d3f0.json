@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-26\",\n  \"tipo_corte\": \"mecanizado\",\n  \"cantidad_cortada\": {\n    \"valor\": 15,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"12:00\",\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"cosechadora\",\n      \"horas\": 0.75,\n      \"causa\": null\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"Quema a mediodía en lote F-26, corte mecanizado de 15 jaulas con paro de cosechadora de 45 minutos.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1175,
+ "tokens_salida": 206,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.482,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

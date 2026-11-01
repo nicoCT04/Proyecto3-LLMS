@@ -1,0 +1,13 @@
+{
+ "texto": "```json\n{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-01\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 200,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 30,\n  \"quema_dia\": \"ayer\",\n  \"quema_hora\": \"20:00\",\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"camion\",\n      \"horas\": 3\n    }\n  ],\n  \"incidentes\": []\n}\n```",
+ "modelo": "gemma-4-26b-a4b-it",
+ "tokens_entrada": 2106,
+ "tokens_salida": 160,
+ "tokens_razonamiento": 1247,
+ "latencia_s": 30.47,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

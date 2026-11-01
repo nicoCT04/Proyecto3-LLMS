@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-27\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 85.0, \"unidad\": \"toneladas\"}, \"cortadores\": 20, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [{\"tipo\": \"lluvia\", \"descripcion\": \"aguacero a las 3\"}]}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1865,
+ "tokens_salida": 113,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.087,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

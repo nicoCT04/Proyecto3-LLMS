@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-18\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 12.0, \"unidad\": \"viajes\"}, \"cortadores\": 29, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": []}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2036,
+ "tokens_salida": 93,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.03,
+ "desde_cache": false,
+ "intentos": 2,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

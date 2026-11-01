@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"46\",\n  \"tipo_corte\": \"mecanizado\",\n  \"cantidad_cortada\": {\n    \"valor\": 24,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"05:00\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": []\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 163,
+ "tokens_salida": 125,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.023,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

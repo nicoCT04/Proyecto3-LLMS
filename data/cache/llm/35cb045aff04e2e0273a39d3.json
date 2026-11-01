@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-32\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 0,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 0,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"No hubo corte en el lote F-32 porque los cortadores asistieron a la feria del pueblo.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1166,
+ "tokens_salida": 149,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.071,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

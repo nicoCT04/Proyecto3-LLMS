@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-23\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 18, \"unidad\": \"jaulas\"}, \"cortadores\": 45, \"quema_dia\": \"anteayer\", \"quema_hora\": \"20:00\", \"cana_pendiente\": {\"valor\": 6, \"unidad\": \"jaulas\"}, \"paros\": [{\"equipo\": \"cosechadora\", \"horas\": 3, \"causa\": \"manguera rota\"}], \"incidentes\": [{\"tipo\": \"accidente\", \"descripcion\": \"A un muchacho se le fue el machete en la pierna y lo llevaron a la clínica\"}], \"resumen\": \"Reporte del lote F-23: corte manual de 18 jaulas con 45 cortadores, 6 jaulas pendientes, paro de cosechadora de 3 horas por manguera rota y un accidente con cortador.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2132,
+ "tokens_salida": 222,
+ "tokens_razonamiento": 0,
+ "latencia_s": 33.149,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

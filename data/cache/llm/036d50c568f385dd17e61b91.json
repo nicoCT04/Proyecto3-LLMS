@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-16\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 345,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 47,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"02:45\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Reporte del lote F-16 con 345 toneladas cortadas por 47 cortadores manuales tras quema realizada hoy a las 02:45.\"\n}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1988,
+ "tokens_salida": 174,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.665,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

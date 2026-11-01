@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-09\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 13.0, \"unidad\": \"jaulas\"}, \"cortadores\": 38, \"quema_dia\": \"ayer\", \"quema_hora\": \"18:00\", \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"alzadora\", \"horas\": 2.5}], \"incidentes\": []}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2073,
+ "tokens_salida": 114,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.168,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-30\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 380,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 55,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"03:15\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Lote F-30 con 55 cortadores, 380 toneladas cortadas y quema hoy a las 03:15.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2010,
+ "tokens_salida": 169,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.209,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

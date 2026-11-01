@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"43\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"cosechadora\",\n      \"horas\": 16.0\n    }\n  ],\n  \"incidentes\": [\n    {\n      \"tipo\": \"falta de repuesto\",\n      \"descripcion\": \"La cosechadora lleva parada desde ayer a las 3 de la tarde por falta de un repuesto.\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 172,
+ "tokens_salida": 175,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.916,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

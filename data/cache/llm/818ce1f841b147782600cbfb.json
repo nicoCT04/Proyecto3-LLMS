@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-13\",\"tipo_corte\":\"mecanizado\",\"cantidad_cortada\":{\"valor\":20,\"unidad\":\"jaulas\"},\"cortadores\":null,\"quema_dia\":null,\"quema_hora\":null,\"cana_pendiente\":null,\"paros\":[],\"incidentes\":[],\"resumen\":\"Se cortaron 20 jaulas de caña con cosechadora en el lote 13.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1170,
+ "tokens_salida": 102,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.931,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

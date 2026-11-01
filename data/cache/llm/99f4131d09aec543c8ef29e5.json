@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-08\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 240, \"unidad\": \"toneladas\"}, \"cortadores\": 35, \"quema_dia\": \"ayer\", \"quema_hora\": \"18:00\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Lote 8: 35 cortadores cortaron 240 toneladas; quema ayer a las 18:00.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1909,
+ "tokens_salida": 134,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.008,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

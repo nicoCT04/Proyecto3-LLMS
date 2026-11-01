@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-20\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 230.0,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 33,\n  \"quema_dia\": \"ayer\",\n  \"quema_hora\": \"19:30\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Corte manual de 230 toneladas en lote F-20 con 33 cortadores.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1173,
+ "tokens_salida": 160,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.14,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

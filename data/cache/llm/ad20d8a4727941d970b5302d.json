@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-13\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 14.0, \"unidad\": \"jaulas\"}, \"cortadores\": 30, \"quema_dia\": \"ayer\", \"quema_hora\": \"16:00\", \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"otro\", \"horas\": 1.5, \"causa\": \"parada\"}], \"incidentes\": [], \"resumen\": \"Lote 13: 14 jaulas cortadas por 30 cortadores, quema ayer a las 16:00 y paro de 1.5 horas.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2061,
+ "tokens_salida": 167,
+ "tokens_razonamiento": 0,
+ "latencia_s": 72.757,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

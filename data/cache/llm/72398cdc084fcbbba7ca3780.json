@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"42\",\n  \"tipo_corte\": \"mecanico\",\n  \"cantidad_cortada\": {\n    \"valor\": 19,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": {\n    \"valor\": null,\n    \"unidad\": null\n  },\n  \"paros\": [\n    {\n      \"equipo\": \"picador\",\n      \"horas\": 1.5\n    }\n  ],\n  \"incidentes\": [\n    {\n      \"tipo\": \"atascamiento\",\n      \"descripcion\": \"Se trabo el picador\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 171,
+ "tokens_salida": 194,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.893,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

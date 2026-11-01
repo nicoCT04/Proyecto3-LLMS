@@ -1,0 +1,13 @@
+{
+ "texto": "",
+ "modelo": "gemma-4-26b-a4b-it",
+ "tokens_entrada": 2135,
+ "tokens_salida": 0,
+ "tokens_razonamiento": 2045,
+ "latencia_s": 43.317,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

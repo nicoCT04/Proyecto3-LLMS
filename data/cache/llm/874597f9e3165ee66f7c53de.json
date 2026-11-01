@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-42\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 19.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"cosechadora\", \"horas\": 1.5, \"causa\": \"se trabo el picador\"}], \"incidentes\": [], \"resumen\": \"Corte mecanizado en el lote F-42 con 19 jaulas cosechadas y un paro de 1.5 horas en la cosechadora por picador trabado.\"}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 2064,
+ "tokens_salida": 167,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.377,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

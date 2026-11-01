@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-48\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 21.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": \"hoy\", \"quema_hora\": \"04:00\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Cosecha mecanizada en lote F-48 con 21 jaulas cortadas tras quema matutina.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2051,
+ "tokens_salida": 130,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.04,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

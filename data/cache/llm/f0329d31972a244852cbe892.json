@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-24\",\n  \"tipo_corte\": \"mecanizado\",\n  \"cantidad_cortada\": {\n    \"valor\": 30,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Se completó el corte mecanizado de 30 jaulas en el lote F-24 con dos cosechadoras sin presentar paros.\"\n}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1169,
+ "tokens_salida": 158,
+ "tokens_razonamiento": 467,
+ "latencia_s": 4.138,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

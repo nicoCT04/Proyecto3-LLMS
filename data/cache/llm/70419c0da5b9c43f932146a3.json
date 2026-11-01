@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-14\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 290,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 40,\n  \"quema_dia\": \"hoy\",\n  \"quema_hora\": \"04:00\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Lote 14: corte manual de 290 toneladas con 40 cortadores y quema a las 04:00 de hoy.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1908,
+ "tokens_salida": 170,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.139,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

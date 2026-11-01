@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-41\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": {\n    \"valor\": 28,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": {\n    \"valor\": null,\n    \"unidad\": null\n  },\n  \"paros\": [\n    {\n      \"equipo\": \"cosechadora 2\",\n      \"horas\": 0.5\n    }\n  ],\n  \"incidentes\": [\n    {\n      \"tipo\": \"sobrecalentamiento\",\n      \"descripcion\": \"La cosechadora 2 paro media hora por sobrecalentamiento\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 174,
+ "tokens_salida": 205,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.934,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

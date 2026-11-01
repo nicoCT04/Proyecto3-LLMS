@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-44\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"plaga\",\n      \"descripcion\": \"Presencia de rata en varios surcos con caña mordida en la base\"\n    }\n  ],\n  \"resumen\": \"Se detectó plaga de ratas afectando la base de la caña en el lote F-44.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1161,
+ "tokens_salida": 170,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.527,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

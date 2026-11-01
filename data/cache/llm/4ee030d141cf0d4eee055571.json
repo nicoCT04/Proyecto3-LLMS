@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"catorce\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": {\n    \"valor\": 300.0,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 42,\n  \"quema_dia\": null,\n  \"quema_hora\": \"04:30\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": []\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 176,
+ "tokens_salida": 128,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.298,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

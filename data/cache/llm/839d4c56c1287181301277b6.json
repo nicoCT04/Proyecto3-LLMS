@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-24\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 30.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Cosecha mecanizada en lote F-24 con 30 jaulas sacadas y sin paros\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1957,
+ "tokens_salida": 121,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.863,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

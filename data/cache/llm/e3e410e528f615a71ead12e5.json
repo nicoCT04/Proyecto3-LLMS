@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-12\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": \"ayer\",\n  \"quema_hora\": \"03:30\",\n  \"cana_pendiente\": {\n    \"valor\": 40,\n    \"unidad\": \"toneladas\"\n  },\n  \"paros\": [\n    {\n      \"equipo\": \"alzadora\",\n      \"horas\": null,\n      \"causa\": \"en el taller\"\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"En el lote F-12 hay 40 toneladas quemadas ayer pendientes y la alzadora sigue en el taller.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1182,
+ "tokens_salida": 195,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.022,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

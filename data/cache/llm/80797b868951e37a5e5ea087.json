@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-23\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 26.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": \"ayer\", \"quema_hora\": \"22:30\", \"cana_pendiente\": {\"valor\": 2.0, \"unidad\": \"jaulas\"}, \"paros\": [], \"incidentes\": [], \"resumen\": \"Lote F-23: corte mecanizado de 26 jaulas, quema ayer a las 22:30 y 2 jaulas pendientes por falta de cabezales.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1868,
+ "tokens_salida": 158,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.122,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

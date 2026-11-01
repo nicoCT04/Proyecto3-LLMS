@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-27\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 85,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 20,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"lluvia\",\n      \"descripcion\": \"Aguacero a las 15:00 detuvo las labores\"\n    }\n  ],\n  \"resumen\": \"Lote F-27: 85 toneladas cortadas con 20 cortadores, labores detenidas por lluvia a las 15:00.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1175,
+ "tokens_salida": 205,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.15,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

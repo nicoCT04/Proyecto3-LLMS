@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-25\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 190, \"unidad\": \"toneladas\"}, \"cortadores\": 28, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [{\"tipo\": \"accidente\", \"descripcion\": \"se lastimo el pie con una cepa\"}]}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1964,
+ "tokens_salida": 113,
+ "tokens_razonamiento": 0,
+ "latencia_s": 2.159,
+ "desde_cache": false,
+ "intentos": 6,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

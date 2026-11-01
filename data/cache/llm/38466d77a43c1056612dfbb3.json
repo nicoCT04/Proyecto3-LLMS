@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": true, \"lote\": null, \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": null}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1961,
+ "tokens_salida": 77,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.891,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

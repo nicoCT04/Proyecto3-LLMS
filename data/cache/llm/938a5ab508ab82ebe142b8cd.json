@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-01\",\"tipo_corte\":\"manual\",\"cantidad_cortada\":{\"valor\":200,\"unidad\":\"toneladas\"},\"cortadores\":30,\"quema_dia\":\"ayer\",\"quema_hora\":\"20:00\",\"cana_pendiente\":null,\"paros\":[{\"equipo\":\"camion\",\"horas\":3.0,\"causa\":\"sin frenos\"}],\"incidentes\":[],\"resumen\":\"Corte manual de 200 toneladas en F-01 con 30 cortadores, quema ayer a las 20:00 y camión detenido 3 horas por fallas en frenos.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1175,
+ "tokens_salida": 150,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.179,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

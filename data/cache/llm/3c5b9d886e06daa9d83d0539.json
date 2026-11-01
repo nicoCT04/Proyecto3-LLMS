@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-18\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 219,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 29,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Lote F-18 con corte manual de 219 toneladas (12 viajes y 3 jaulas) por 29 cortadores, sin quema hoy.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1169,
+ "tokens_salida": 167,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.127,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

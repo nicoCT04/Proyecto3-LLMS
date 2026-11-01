@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-32\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 0, \"unidad\": \"toneladas\"}, \"cortadores\": 0, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [{\"tipo\": \"otro\", \"descripcion\": \"cortadores ausentes por feria del pueblo\"}]}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1930,
+ "tokens_salida": 108,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.958,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

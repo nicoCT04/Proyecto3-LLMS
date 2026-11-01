@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-10\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 330,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 45,\n  \"quema_dia\": \"ayer\",\n  \"quema_hora\": \"21:00\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Se cortaron 330 toneladas en el lote F-10 con 45 cortadores; quema anoche a las 21:00.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1167,
+ "tokens_salida": 171,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.17,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"35\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"bomba de riego\",\n      \"horas\": null\n    }\n  ],\n  \"incidentes\": [\n    {\n      \"tipo\": \"falla mecanica\",\n      \"descripcion\": \"La bomba de riego del lote 35 no arranca desde ayer, se aviso al mecanico\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 162,
+ "tokens_salida": 170,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.055,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

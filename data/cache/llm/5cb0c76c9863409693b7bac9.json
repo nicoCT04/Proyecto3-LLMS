@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": null,\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 240,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 35,\n  \"quema_dia\": \"ayer\",\n  \"quema_hora\": \"18:00\",\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"35 cortadores cosecharon 240 toneladas. La quema fue ayer a las 18:00.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1177,
+ "tokens_salida": 160,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.273,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

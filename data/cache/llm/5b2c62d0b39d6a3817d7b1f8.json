@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-33\",\"tipo_corte\":null,\"cantidad_cortada\":null,\"cortadores\":null,\"quema_dia\":null,\"quema_hora\":null,\"cana_pendiente\":null,\"paros\":[],\"incidentes\":[{\"tipo\":\"plaga\",\"descripcion\":\"Lote con presencia de barrenador y tallos con agujeros\"}],\"resumen\":\"Lote F-33 afectado por barrenador, se requiere intervención de sanidad\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1172,
+ "tokens_salida": 107,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.231,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

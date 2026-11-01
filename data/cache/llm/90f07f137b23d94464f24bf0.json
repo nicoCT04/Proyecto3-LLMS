@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-34\",\"tipo_corte\":\"manual\",\"cantidad_cortada\":{\"valor\":250,\"unidad\":\"toneladas\"},\"cortadores\":36,\"quema_dia\":\"hoy\",\"quema_hora\":\"04:30\",\"cana_pendiente\":null,\"paros\":[{\"equipo\":\"tractor\",\"horas\":2,\"causa\":\"llanta\"}],\"incidentes\":[],\"resumen\":\"Corte manual en lote F-34 con 36 cortadores, 250 toneladas cosechadas, quema hoy a las 04:30 y paro de tractor de 2 horas por llanta.\"}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1188,
+ "tokens_salida": 148,
+ "tokens_razonamiento": 800,
+ "latencia_s": 5.221,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

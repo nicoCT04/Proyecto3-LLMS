@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-40\", \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [{\"tipo\": \"plaga\", \"descripcion\": \"salivazo\"}]}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1912,
+ "tokens_salida": 90,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.157,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-43\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"cosechadora\",\n      \"horas\": 16.0,\n      \"causa\": \"falta un repuesto\"\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"Cosechadora del lote F-43 detenida 16 horas por falta de repuesto.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1170,
+ "tokens_salida": 171,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.1,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

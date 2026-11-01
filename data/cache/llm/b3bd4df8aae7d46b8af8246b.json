@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-23\",\n  \"tipo_corte\": \"maquina\",\n  \"cantidad_cortada\": {\n    \"valor\": 26,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": \"anoche\",\n  \"quema_hora\": \"10:30 PM\",\n  \"cana_pendiente\": {\n    \"valor\": 2,\n    \"unidad\": \"jaulas\"\n  },\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"logistica\",\n      \"descripcion\": \"2 jaulas sin despachar por falta de cabezales\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 180,
+ "tokens_salida": 184,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.902,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

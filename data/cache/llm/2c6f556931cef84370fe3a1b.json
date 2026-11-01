@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"5\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": {\n    \"valor\": 0,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": \"ayer\",\n  \"quema_hora\": \"6:00 PM\",\n  \"cana_pendiente\": {\n    \"valor\": 200,\n    \"unidad\": \"toneladas\"\n  },\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"falta de equipo\",\n      \"descripcion\": \"No hay jaulas disponibles\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 177,
+ "tokens_salida": 175,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.941,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

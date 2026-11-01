@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": null, \"tipo_corte\": null, \"cantidad_cortada\": {\"valor\": 300, \"unidad\": \"toneladas\"}, \"cortadores\": null, \"quema_dia\": \"hoy\", \"quema_hora\": \"05:00\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": []}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1893,
+ "tokens_salida": 92,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.945,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

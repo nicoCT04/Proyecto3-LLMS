@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-29\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 275.0,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 39,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [],\n  \"resumen\": \"Se cortaron 275 toneladas en el lote F-29 con 39 cortadores y sin novedades.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1158,
+ "tokens_salida": 157,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.122,
+ "desde_cache": false,
+ "intentos": 5,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

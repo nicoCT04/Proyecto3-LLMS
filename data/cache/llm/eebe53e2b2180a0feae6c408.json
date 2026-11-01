@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-15\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 260,\n    \"unidad\": \"toneladas\"\n  },\n  \"cortadores\": 38,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"accidente\",\n      \"descripcion\": \"Un cortador se desmayó por el calor, fue atendido por el paramédico y ya está bien.\"\n    }\n  ],\n  \"resumen\": \"Se cortaron 260 toneladas en el lote F-15 con 38 cortadores y se atendió un caso de desmayo por calor.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1181,
+ "tokens_salida": 213,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.502,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

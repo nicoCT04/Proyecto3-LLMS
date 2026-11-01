@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-39\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 280, \"unidad\": \"toneladas\"}, \"cortadores\": 41, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": {\"valor\": 50, \"unidad\": \"toneladas\"}, \"paros\": [], \"incidentes\": [], \"resumen\": \"Lote F-39 con 280 toneladas cortadas y 50 toneladas pendientes en campo.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1931,
+ "tokens_salida": 134,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.073,
+ "desde_cache": false,
+ "intentos": 4,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

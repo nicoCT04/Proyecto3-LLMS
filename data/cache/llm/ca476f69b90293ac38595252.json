@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-35\", \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"bomba_riego\", \"horas\": null, \"causa\": \"no arranca desde ayer\"}], \"incidentes\": [], \"resumen\": \"Bomba de riego detenida en lote F-35 desde ayer.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1850,
+ "tokens_salida": 123,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.106,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

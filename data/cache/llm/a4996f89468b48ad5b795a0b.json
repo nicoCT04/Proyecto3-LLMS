@@ -1,0 +1,13 @@
+{
+ "texto": "```json\n{\n  \"fuera_de_tema\": false,\n  \"lote\": null,",
+ "modelo": "gemma-4-26b-a4b-it",
+ "tokens_entrada": 2042,
+ "tokens_salida": 24,
+ "tokens_razonamiento": 2020,
+ "latencia_s": 43.518,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

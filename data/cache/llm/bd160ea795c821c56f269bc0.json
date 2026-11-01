@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-29\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 275, \"unidad\": \"toneladas\"}, \"cortadores\": 39, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Corte manual completado en lote 29 sin novedades.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1973,
+ "tokens_salida": 111,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.007,
+ "desde_cache": false,
+ "intentos": 2,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

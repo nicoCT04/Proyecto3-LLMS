@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-39\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 280, \"unidad\": \"toneladas\"}, \"cortadores\": 41, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": {\"valor\": 50, \"unidad\": \"toneladas\"}, \"paros\": [], \"incidentes\": []}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2023,
+ "tokens_salida": 106,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.937,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-28\",\"tipo_corte\":\"manual\",\"cantidad_cortada\":{\"valor\":18,\"unidad\":\"viajes\"},\"cortadores\":32,\"quema_dia\":\"hoy\",\"quema_hora\":\"02:00\",\"cana_pendiente\":null,\"paros\":[],\"incidentes\":[],\"resumen\":\"Corte manual en el lote F-28 con 32 cortadores, despachando 18 viajes de camión tras quema a las 02:00.\"",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 1165,
+ "tokens_salida": 121,
+ "tokens_razonamiento": 888,
+ "latencia_s": 5.73,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

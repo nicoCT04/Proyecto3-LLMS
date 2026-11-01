@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-46\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 24, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": \"hoy\", \"quema_hora\": \"05:00\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Corte mecanizado en lote 46 con 24 jaulas y quema a las 05:00.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1981,
+ "tokens_salida": 129,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.09,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

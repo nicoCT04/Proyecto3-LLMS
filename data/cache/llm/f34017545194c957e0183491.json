@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-14\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 290, \"unidad\": \"toneladas\"}, \"cortadores\": 40, \"quema_dia\": \"hoy\", \"quema_hora\": \"04:00\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Corte manual de 290 toneladas en el lote 14 con 40 cortadores, quema hoy a las 04:00.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2000,
+ "tokens_salida": 138,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.337,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

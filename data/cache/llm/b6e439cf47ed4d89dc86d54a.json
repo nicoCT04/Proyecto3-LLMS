@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-35\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": {\n    \"valor\": 21.0,\n    \"unidad\": \"viajes\"\n  },\n  \"cortadores\": 60,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"accidente\",\n      \"descripcion\": \"vara en el ojo a un trabajador\"\n    }\n  ],\n  \"resumen\": \"Lote F-35: 60 cortadores, 21 viajes sacados y un accidente leve.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2066,
+ "tokens_salida": 186,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.383,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

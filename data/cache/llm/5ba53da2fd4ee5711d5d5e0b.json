@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-25\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 190.0, \"unidad\": \"toneladas\"}, \"cortadores\": 28, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [{\"tipo\": \"accidente\", \"descripcion\": \"cortador se lastimo el pie con una cepa\"}], \"resumen\": \"Corte manual en F-25 con 28 cortadores, 190 toneladas y un incidente leve de pie.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1860,
+ "tokens_salida": 150,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.108,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

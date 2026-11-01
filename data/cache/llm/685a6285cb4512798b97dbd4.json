@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-47\", \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": \"anteayer\", \"quema_hora\": \"22:00\", \"cana_pendiente\": {\"valor\": 4.0, \"unidad\": \"jaulas\"}, \"paros\": [{\"equipo\": \"cosechadora\", \"horas\": 3.0}], \"incidentes\": [], \"resumen\": \"Cuatro jaulas pendientes en F-47 por falta de recepción, cosechadora detenida 3 horas.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 2065,
+ "tokens_salida": 141,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.149,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

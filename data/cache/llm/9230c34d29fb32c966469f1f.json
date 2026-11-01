@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\":false,\"lote\":\"F-07\",\"tipo_corte\":null,\"cantidad_cortada\":null,\"cortadores\":null,\"quema_dia\":\"anteayer\",\"quema_hora\":\"00:00\",\"cana_pendiente\":{\"valor\":5,\"unidad\":\"jaulas\"},\"paros\":[],\"incidentes\":[],\"resumen\":\"Quema en lote F-07 anteayer a medianoche con 5 jaulas pendientes por falta de recepción en el ingenio.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1170,
+ "tokens_salida": 110,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.023,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-08\", \"tipo_corte\": \"manual\", \"cantidad_cortada\": {\"valor\": 240.0, \"unidad\": \"toneladas\"}, \"cortadores\": 35, \"quema_dia\": \"ayer\", \"quema_hora\": \"18:00\", \"cana_pendiente\": null, \"paros\": [], \"incidentes\": [], \"resumen\": \"Treinta y cinco cortadores recolectaron 240 toneladas en el lote F-08 tras la quema de ayer a las 18:00.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1867,
+ "tokens_salida": 142,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.245,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

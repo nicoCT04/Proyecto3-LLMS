@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-40\",\n  \"tipo_corte\": \"manual\",\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"accidente\",\n      \"descripcion\": \"Dos cortadores lesionados con el machete\"\n    }\n  ],\n  \"resumen\": \"Accidente de dos cortadores con machete en el lote F-40.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1175,
+ "tokens_salida": 157,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.038,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"7\",\n  \"tipo_corte\": null,\n  \"cantidad_cortada\": null,\n  \"cortadores\": null,\n  \"quema_dia\": \"antier\",\n  \"quema_hora\": \"medianoche\",\n  \"cana_pendiente\": {\n    \"valor\": 5,\n    \"unidad\": \"jaulas\"\n  },\n  \"paros\": [],\n  \"incidentes\": [\n    {\n      \"tipo\": \"falta de recepción\",\n      \"descripcion\": \"el ingenio no recibe\"\n    }\n  ]\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 172,
+ "tokens_salida": 150,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.007,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": null
+ }
+}

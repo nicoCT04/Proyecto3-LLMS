@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-45\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 17.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": \"hoy\", \"quema_hora\": \"03:00\", \"cana_pendiente\": {\"valor\": 60.0, \"unidad\": \"toneladas\"}, \"paros\": [{\"equipo\": \"cosechadora\", \"horas\": 3.0, \"causa\": \"falla electrica\"}], \"incidentes\": [], \"resumen\": \"Lote F-45: cosecha mecanizada con 17 jaulas, paro de 3 horas por falla eléctrica y 60 toneladas quemadas pendientes.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1873,
+ "tokens_salida": 180,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.153,
+ "desde_cache": false,
+ "intentos": 4,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

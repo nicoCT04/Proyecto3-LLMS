@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-12\", \"tipo_corte\": null, \"cantidad_cortada\": null, \"cortadores\": null, \"quema_dia\": \"ayer\", \"quema_hora\": \"03:30\", \"cana_pendiente\": {\"valor\": 40.0, \"unidad\": \"toneladas\"}, \"paros\": [{\"equipo\": \"alzadora\", \"horas\": null, \"causa\": \"en el taller desde ayer en la tarde\"}], \"incidentes\": [], \"resumen\": \"En el lote F-12 permanecen 40 toneladas de caña quemadas ayer de madrugada sin alzar debido a que la alzadora continúa en el taller.\"}",
+ "modelo": "gemini-3.5-flash",
+ "tokens_entrada": 2057,
+ "tokens_salida": 164,
+ "tokens_razonamiento": 0,
+ "latencia_s": 2.139,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

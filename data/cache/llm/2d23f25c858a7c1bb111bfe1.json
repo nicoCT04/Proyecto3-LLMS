@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-42\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 19.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": null, \"quema_hora\": null, \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"cosechadora\", \"horas\": 1.5, \"causa\": \"se trabo el picador\"}], \"incidentes\": [], \"resumen\": \"Cosechadora en lote F-42 completó 19 jaulas con un paro de 1.5 horas por picador trabado.\"}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1859,
+ "tokens_salida": 160,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.036,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

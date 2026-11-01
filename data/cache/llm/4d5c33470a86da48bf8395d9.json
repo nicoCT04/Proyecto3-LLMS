@@ -1,0 +1,13 @@
+{
+ "texto": "{\"fuera_de_tema\": false, \"lote\": \"F-26\", \"tipo_corte\": \"mecanizado\", \"cantidad_cortada\": {\"valor\": 15.0, \"unidad\": \"jaulas\"}, \"cortadores\": null, \"quema_dia\": \"hoy\", \"quema_hora\": \"12:00\", \"cana_pendiente\": null, \"paros\": [{\"equipo\": \"cosechadora\", \"horas\": 0.75, \"causa\": null}], \"incidentes\": []}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1865,
+ "tokens_salida": 122,
+ "tokens_razonamiento": 0,
+ "latencia_s": 0.878,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}

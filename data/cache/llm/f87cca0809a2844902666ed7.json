@@ -1,0 +1,13 @@
+{
+ "texto": "{\n  \"fuera_de_tema\": false,\n  \"lote\": \"F-42\",\n  \"tipo_corte\": \"mecanizado\",\n  \"cantidad_cortada\": {\n    \"valor\": 19,\n    \"unidad\": \"jaulas\"\n  },\n  \"cortadores\": null,\n  \"quema_dia\": null,\n  \"quema_hora\": null,\n  \"cana_pendiente\": null,\n  \"paros\": [\n    {\n      \"equipo\": \"cosechadora\",\n      \"horas\": 1.5,\n      \"causa\": \"se trabo el picador\"\n    }\n  ],\n  \"incidentes\": [],\n  \"resumen\": \"La cosechadora en el lote F-42 corto 19 jaulas y estuvo detenida 1 hora y media por atasco en el picador.\"\n}",
+ "modelo": "gemini-3.5-flash-lite",
+ "tokens_entrada": 1169,
+ "tokens_salida": 206,
+ "tokens_razonamiento": 0,
+ "latencia_s": 1.183,
+ "desde_cache": false,
+ "intentos": 1,
+ "extra": {
+  "esquema": "Bitacora"
+ }
+}
