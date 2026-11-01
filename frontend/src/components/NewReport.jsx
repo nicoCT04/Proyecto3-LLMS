@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { api, BURN_DAY_LABEL, EQUIPMENT_LABEL, fmt, INCIDENT_LABEL, localNow } from "../api.js";
+import { api, BURN_DAY_LABEL, EQUIPMENT_LABEL, fmt, INCIDENT_LABEL, localNow, shortDate } from "../api.js";
 import AlertList from "./AlertList.jsx";
 import Icon from "./Icon.jsx";
 import Waveform from "./Waveform.jsx";
@@ -103,6 +103,17 @@ const toNumber = (v) => {
 
 const saidHint = (raw) =>
   raw?.unidad && raw.unidad !== "toneladas" ? `Dijo ${fmt(raw.valor, raw.valor % 1 ? 1 : 0)} ${raw.unidad}` : null;
+
+// «hoy/ayer/anteayer» se cuentan desde que se recibió la nota, no desde la fecha actual
+const BURN_DAY_OFFSET = { hoy: 0, ayer: 1, anteayer: 2 };
+const burnHint = (day, time, received) => {
+  if (!day || !received) return null;
+  const d = new Date(received.replace(" ", "T"));
+  d.setDate(d.getDate() - BURN_DAY_OFFSET[day]);
+  const date = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const when = time ? shortDate(`${date} ${time}`) : shortDate(date).split(" · ")[0];
+  return `Fue el ${when} · «${BURN_DAY_LABEL[day].toLowerCase()}» respecto a la nota recibida`;
+};
 
 const withUnit = (value, decimals, unit, sign = "") =>
   value == null ? <span className="dash">—</span> : <>{sign}{fmt(value, decimals)}<small> {unit}</small></>;
@@ -346,7 +357,7 @@ export default function NewReport({ catalog, health, onSaved }) {
                     <span>personas</span>
                   </span>
                 </Field>
-                <Field label="Quema" flagged={burnFlagged}>
+                <Field label="Quema" flagged={burnFlagged} hint={burnHint(report.quema_dia, report.quema_hora, result.reportado)}>
                   <span className="burn-input">
                     <Segmented
                       label="Día de la quema"
