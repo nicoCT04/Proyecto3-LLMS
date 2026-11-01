@@ -1,76 +1,124 @@
 import { useEffect, useState } from "react";
 import { api } from "./api.js";
-import NuevoReporte from "./components/NuevoReporte.jsx";
-import Tablero from "./components/Tablero.jsx";
-import ComoFunciona from "./components/ComoFunciona.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+import HowItWorks from "./components/HowItWorks.jsx";
+import Icon, { Mark } from "./components/Icon.jsx";
+import NewReport from "./components/NewReport.jsx";
 
-const VISTAS = [
-  { id: "nuevo", etiqueta: "Nuevo reporte" },
-  { id: "tablero", etiqueta: "Tablero" },
-  { id: "como", etiqueta: "Cómo funciona" },
+const SCREENS = [
+  { id: "nota", label: "Registrar nota", short: "Nota", icon: "note" },
+  { id: "tablero", label: "Tablero", short: "Tablero", icon: "board" },
+  { id: "como-funciona", label: "Cómo funciona", short: "Cómo funciona", icon: "flow" },
 ];
 
-function temaInicial() {
+const screenFromHash = () => {
+  const id = window.location.hash.replace("#/", "");
+  return SCREENS.some((s) => s.id === id) ? id : "nota";
+};
+
+function initialTheme() {
   try {
-    return localStorage.getItem("tema") || "light";
+    return localStorage.getItem("tema") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   } catch {
     return "light";
   }
 }
 
 export default function App() {
-  const [vista, setVista] = useState("nuevo");
-  const [tema, setTema] = useState(temaInicial);
-  const [salud, setSalud] = useState(null);
-  const [catalogo, setCatalogo] = useState(null);
+  const [screen, setScreen] = useState(screenFromHash);
+  const [theme, setTheme] = useState(initialTheme);
+  const [health, setHealth] = useState(null);
+  const [catalog, setCatalog] = useState(null);
   const [version, setVersion] = useState(0);
 
   useEffect(() => {
-    document.documentElement.dataset.theme = tema;
-    try {
-      localStorage.setItem("tema", tema);
-    } catch {}
-  }, [tema]);
-
-  useEffect(() => {
-    api.salud().then(setSalud).catch(() => setSalud({ ok: false }));
-    api.catalogo().then(setCatalogo).catch(() => setCatalogo({ lotes: [] }));
+    const onHash = () => setScreen(screenFromHash());
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem("tema", theme);
+    } catch {}
+  }, [theme]);
+
+  useEffect(() => {
+    api.health().then(setHealth).catch(() => setHealth({ ok: false }));
+    api.catalog().then(setCatalog).catch(() => setCatalog({ lotes: [] }));
+  }, []);
+
+  const go = (id) => {
+    window.location.hash = `#/${id}`;
+    window.scrollTo({ top: 0 });
+  };
+  const current = SCREENS.find((s) => s.id === screen);
+
+  const status = health && (
+    <span className={`status ${health.ok ? "" : "down"}`} title={health.descripcion}>
+      <i />
+      {health.ok ? <>{health.modelo}{health.modo_demo && <b> · demo sin internet</b>}</> : "Sin conexión con el servidor"}
+    </span>
+  );
+
+  const themeToggle = (
+    <button type="button" className="btn-icon" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label={theme === "dark" ? "Usar tema claro" : "Usar tema oscuro"}>
+      <Icon name={theme === "dark" ? "sun" : "moon"} />
+    </button>
+  );
+
   return (
-    <div className="app">
-      <header className="topbar">
-        <div className="marca">
-          <img src="/cana.svg" alt="" width="30" height="30" />
+    <div className="shell">
+      <aside className="sidebar">
+        <div className="brand">
+          <Mark />
           <div>
-            <h1>Bitácora de Zafra</h1>
-            <span className="sub">Notas de campo → reportes y alertas con un LLM</span>
+            <strong>Bitácora de Zafra</strong>
+            <span>Zafra {catalog?.temporada ?? "2026-2027"} · {catalog?.lotes?.length ?? 48} lotes</span>
           </div>
         </div>
-        <div className="estado">
-          {salud && (
-            <span className={`pastilla ${salud.ok ? "ok" : "mal"}`} title={salud.descripcion}>
-              {salud.ok ? `${salud.modelo}${salud.modo_demo ? " · demo" : ""}` : "sin conexión"}
-            </span>
-          )}
-          <button className="icono" onClick={() => setTema(tema === "dark" ? "light" : "dark")}
-                  aria-label="Cambiar tema">{tema === "dark" ? "☀" : "☾"}</button>
+        <nav aria-label="Secciones">
+          {SCREENS.map((s) => (
+            <a key={s.id} href={`#/${s.id}`} className={screen === s.id ? "active" : ""}
+               aria-current={screen === s.id ? "page" : undefined}>
+              <Icon name={s.icon} />{s.label}
+            </a>
+          ))}
+        </nav>
+        <div className="sidebar-foot">{status}</div>
+      </aside>
+
+      <header className="topbar">
+        <div className="crumbs">
+          <span className="phone-brand"><Mark size={24} />Bitácora de Zafra</span>
+          <span className="crumb-scope">Ingenio · Zafra {catalog?.temporada ?? "2026-2027"}</span>
+          <span className="crumb-sep" aria-hidden="true">/</span>
+          <span className="crumb-current">{current.label}</span>
+        </div>
+        <div className="topbar-actions">
+          <span className="topbar-status">{status}</span>
+          {themeToggle}
         </div>
       </header>
-      <nav className="pestanas">
-        {VISTAS.map((v) => (
-          <button key={v.id} className={vista === v.id ? "activa" : ""} onClick={() => setVista(v.id)}>
-            {v.etiqueta}
-          </button>
+
+      <main className="sheet">
+        {screen === "nota" && (
+          <NewReport catalog={catalog} health={health} onSaved={() => { setVersion((v) => v + 1); go("tablero"); }} />
+        )}
+        {screen === "tablero" && <Dashboard version={version} catalog={catalog} onNewNote={() => go("nota")} />}
+        {screen === "como-funciona" && <HowItWorks health={health} />}
+      </main>
+
+      <nav className="tabbar" aria-label="Secciones">
+        {SCREENS.map((s) => (
+          <a key={s.id} href={`#/${s.id}`} className={screen === s.id ? "active" : ""}
+             aria-current={screen === s.id ? "page" : undefined}>
+            <Icon name={s.icon} size={20} />{s.short}
+          </a>
         ))}
       </nav>
-      <main className="contenido">
-        {vista === "nuevo" && (
-          <NuevoReporte catalogo={catalogo} alGuardar={() => { setVersion(version + 1); setVista("tablero"); }} />
-        )}
-        {vista === "tablero" && <Tablero version={version} />}
-        {vista === "como" && <ComoFunciona salud={salud} />}
-      </main>
     </div>
   );
 }
