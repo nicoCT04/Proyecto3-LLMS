@@ -1,0 +1,3 @@
+Extrae la información de este reporte de campo de un ingenio azucarero y responde solo con un JSON con estas claves:
+fuera_de_tema (bool), lote, tipo_corte, cantidad_cortada {valor, unidad}, cortadores, quema_dia, quema_hora, cana_pendiente {valor, unidad}, paros [{equipo, horas}], incidentes [{tipo, descripcion}].
+Usa null cuando un dato no aparezca.
