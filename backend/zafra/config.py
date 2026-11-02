@@ -47,3 +47,5 @@ UMBRAL_QUEMA_HORAS = 24            # caña quemada sin moler: aviso
 UMBRAL_QUEMA_CRITICO = 48          # caña quemada sin moler: crítico
 UMBRAL_PARO_HORAS = 2              # paro de equipo que se considera largo
 LARGO_MAXIMO_NOTA = 1500           # caracteres; protege la ventana de contexto
+# En el tier gratuito, de vez en cuando una solicitud se queda en cola casi un minuto: se corta y se reintenta
+TIEMPO_MAXIMO_S = 15                # Gemma (abierto, más lento) usa 8 veces esto

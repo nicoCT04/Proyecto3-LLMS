@@ -10,6 +10,7 @@ import threading
 import time
 from dataclasses import dataclass, field
 
+import httpx
 from google import genai
 from google.genai import types
 
@@ -51,7 +52,13 @@ def _clave(*partes) -> str:
                                      default=str).encode()).hexdigest()[:24]
 
 
+def _es_timeout(err: Exception) -> bool:
+    return isinstance(err, httpx.TimeoutException) or "timed out" in str(err).lower()
+
+
 def _reintentable(err: Exception) -> bool:
+    if _es_timeout(err):
+        return True
     texto = str(err)
     if "per day" in texto or "PerDay" in texto:   # cuota diaria agotada: esperar no sirve
         return False
@@ -77,7 +84,9 @@ def generar(modelo: str, sistema: str, usuario: str, esquema=None, json_mode: bo
 
     # Gemma no admite instrucciones de sistema ni JSON forzado: va todo en el turno del usuario.
     es_gemma = modelo.startswith("gemma")
-    cfg = {"temperature": temperature, "top_p": config.TOP_P, "max_output_tokens": config.MAX_TOKENS}
+    cfg = {"temperature": temperature, "top_p": config.TOP_P, "max_output_tokens": config.MAX_TOKENS,
+           "http_options": types.HttpOptions(
+               timeout=int(config.TIEMPO_MAXIMO_S * (8 if es_gemma else 1) * 1000))}
     if not es_gemma:
         cfg["system_instruction"] = sistema
         # el razonamiento interno cuenta dentro de max_output_tokens; "low" evita JSON truncado
@@ -108,6 +117,9 @@ def generar(modelo: str, sistema: str, usuario: str, esquema=None, json_mode: bo
         except Exception as err:  # noqa: BLE001 - la API lanza varios tipos
             if intento == max_reintentos or not _reintentable(err):
                 raise
+            if _es_timeout(err):
+                print(f"[llm] {modelo} no respondió en el tiempo máximo; reintento {intento + 1}")
+                continue                     # la solicitud colgada no dice nada del servidor: reintentar ya
             time.sleep(espera)
             espera = min(espera * 2, 60)
     raise RuntimeError("sin respuesta")

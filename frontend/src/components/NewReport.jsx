@@ -125,6 +125,14 @@ export default function NewReport({ catalog, health, onSaved }) {
   const [reportedAt, setReportedAt] = useState(localNow());
   const [examples, setExamples] = useState([]);
   const [loading, setLoading] = useState(false);
+  // en el tier gratuito, a veces una solicitud se queda en cola: avisar en vez de dejar «Procesando» mudo
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    setSlow(false);
+    if (!loading) return;
+    const timer = setTimeout(() => setSlow(true), 5000);
+    return () => clearTimeout(timer);
+  }, [loading]);
   const [error, setError] = useState("");
   const [result, setResult] = useState(null);
   const [report, setReport] = useState(null);
@@ -253,7 +261,7 @@ export default function NewReport({ catalog, health, onSaved }) {
               </label>
             )}
             <button type="button" className="btn btn-primary process" onClick={process} disabled={loading || !text.trim()}>
-              {loading ? "Procesando…" : "Procesar nota"}
+              {loading ? (slow ? "Sigue procesando…" : "Procesando…") : "Procesar nota"}
             </button>
           </div>
           {error && <p className="inline-error" role="alert"><Icon name="alert" size={14} />{error}</p>}
@@ -296,6 +304,12 @@ export default function NewReport({ catalog, health, onSaved }) {
                   ? `Buscando los 4 ejemplos más parecidos y extrayendo los datos con ${health?.modelo ?? "el modelo"}…`
                   : "Aquí aparece lo que el sistema entendió de la nota, listo para revisar."}
               </p>
+              {slow && (
+                <p className="slow-note" role="status">
+                  El modelo está tardando más de lo normal (cola del servicio gratuito). Si no responde en 15 s, se
+                  reintenta solo.
+                </p>
+              )}
               <dl className="ghost-fields">
                 {PLACEHOLDER_FIELDS.map((f) => (
                   <div key={f}><dt>{f}</dt><dd>{loading ? <span className="bar" /> : "—"}</dd></div>

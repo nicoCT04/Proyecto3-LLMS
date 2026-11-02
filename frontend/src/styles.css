@@ -179,6 +179,14 @@ small { font-size: 0.72em; color: var(--muted); font-weight: 400; }
 .panel-meta { font-size: var(--fs-small); color: var(--muted); }
 .block-title { font-size: 13px; font-weight: 600; line-height: 20px; }
 .empty-line { color: var(--muted); }
+.slow-note {
+  margin: 8px 0 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--warning-zone);
+  color: var(--warning);
+  font-size: 0.9em;
+}
 .empty-box {
   border: 1px dashed var(--control);
   border-radius: var(--radius-card);
