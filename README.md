@@ -8,6 +8,8 @@ estructurados y alertas accionables**. El caporal escribe *"ing en el 47 todaví
 antier a las 10 de la noche y el ingenio no ha recibido"* y el jefe de cosecha ve en el tablero:
 lote F-47, 100 t de caña quemada hace 44 h, **~1 t de azúcar ya perdida y ~0.6 t más si espera 24 h**.
 
+🎬 **Video de demostración (3 min):** [`reports/video_demo.mp4`](reports/video_demo.mp4)
+
 ## El problema
 
 Durante la zafra, los supervisores reportan su jornada con mensajes informales. Alguien los pasa a mano a una hoja
@@ -158,7 +160,7 @@ Proyecto3-LLMS/
 │   ├── evaluar.py, metricas.py, tabla_readme.py
 │   └── resultados/             predicciones por iteración, resumen.csv, registro.csv
 ├── notebook/proyecto3.ipynb    análisis de datos, pipeline y resultados
-├── reports/                    figuras, tablas y diagrama de arquitectura
+├── reports/                    figuras, tablas, diagrama de arquitectura y video de demostración
 └── tests/                      pruebas de las partes deterministas
 ```
 
