@@ -1,8 +1,7 @@
 # Validación humana de las respuestas de referencia
 
 Cada integrante revisa **de forma independiente** que la respuesta de referencia (`gold`) de cada nota cumpla
-`GUIA_ANOTAC`  
-`ION.md`. Marque ✓ si está de acuerdo o escriba la corrección. Los desacuerdos se discuten,
+`GUIA_ANOTACION.md`. Marque ✓ si está de acuerdo o escriba la corrección. Los desacuerdos se discuten,
 se corrige `construir_dataset.py`, se regenera el set y se vuelve a correr `eval/evaluar.py` (las
 respuestas del LLM están en caché, así que re-evaluar no cuesta nada).
 
