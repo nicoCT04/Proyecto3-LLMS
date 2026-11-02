@@ -6,18 +6,24 @@ import AlertList from "./AlertList.jsx";
 import Icon from "./Icon.jsx";
 
 const LEVEL_ORDER = { critico: 0, aviso: 1, info: 2 };
-const FILTERS = [["todas", "Todas"], ["critico", "Críticas"], ["aviso", "Avisos"], ["info", "Info"]];
+const FILTERS = [["todas", "Abiertas"], ["critico", "Críticas"], ["aviso", "Avisos"], ["info", "Info"], ["resueltas", "Resueltas"]];
+const BURN_ALERTS = ["cana_quemada_pendiente", "cana_pendiente"];
+// la caña pendiente de un reporte deja de contar cuando el jefe de cosecha cierra su alerta (ya se despachó)
+const pendingOpen = (r) => !r.alertas.some((a) => BURN_ALERTS.includes(a.tipo) && a.resuelta);
 const ALERT_CAP = 6;
 
 function exportCsv(reports) {
   const columns = ["id", "reportado", "lote", "tipo_corte", "toneladas_cortadas", "cortadores", "quema_dia",
-    "quema_hora", "horas_desde_quema", "cana_pendiente_ton", "azucar_perdida_t", "paros", "incidentes", "texto"];
+    "quema_hora", "horas_desde_quema", "cana_pendiente_ton", "azucar_perdida_t", "paros", "incidentes",
+    "alertas_abiertas", "alertas_resueltas", "notas_de_cierre", "texto"];
   const escape = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
   const rows = reports.map((r) => {
     const x = r.reporte;
     return [r.id, r.reportado, x.lote, x.tipo_corte, x.toneladas_cortadas, x.cortadores, x.quema_dia,
       x.quema_hora, x.derivados?.horas_desde_quema, x.cana_pendiente_ton, x.derivados?.azucar_perdida_t,
-      x.paros.map((p) => `${p.equipo}:${p.horas ?? "?"}h`).join(" "), x.incidentes.join(" "), r.texto].map(escape).join(",");
+      x.paros.map((p) => `${p.equipo}:${p.horas ?? "?"}h`).join(" "), x.incidentes.join(" "),
+      r.alertas.filter((a) => !a.resuelta).length, r.alertas.filter((a) => a.resuelta).length,
+      r.alertas.filter((a) => a.nota_cierre).map((a) => a.nota_cierre).join(" | "), r.texto].map(escape).join(",");
   });
   const blob = new Blob(["﻿" + [columns.join(","), ...rows].join("\n")], { type: "text/csv;charset=utf-8" });
   const link = document.createElement("a");
@@ -109,6 +115,15 @@ function Cell({ label, value, numeric }) {
 const describeStops = (stops) =>
   stops.map((p) => `${EQUIPMENT_LABEL[p.equipo] ?? p.equipo}${p.horas != null ? ` ${fmt(p.horas, p.horas % 1 ? 1 : 0)} h` : ""}`).join(", ");
 
+// estado de las alertas de un reporte: abiertas, todas resueltas o sin alertas
+function alertStatus(alerts) {
+  if (!alerts.length) return null;
+  const open = alerts.filter((a) => !a.resuelta).length;
+  return open
+    ? <span className="status status-open">{open === 1 ? "1 abierta" : `${open} abiertas`}</span>
+    : <span className="status status-done">Resuelta</span>;
+}
+
 const describeBurn = (x) =>
   x.quema_dia ? `${BURN_DAY_LABEL[x.quema_dia]}${x.quema_hora ? ` ${x.quema_hora}` : ""}` : null;
 
@@ -139,16 +154,16 @@ export default function Dashboard({ version, catalog, onNewNote }) {
     return {
       count: reports.length,
       cut: sum((r) => r.reporte.toneladas_cortadas),
-      pending: sum((r) => r.reporte.cana_pendiente_ton),
-      lost: sum((r) => r.reporte.derivados?.azucar_perdida_t),
-      critical: sum((r) => r.alertas.filter((a) => a.nivel === "critico").length),
+      pending: sum((r) => pendingOpen(r) && r.reporte.cana_pendiente_ton),
+      lost: sum((r) => pendingOpen(r) && r.reporte.derivados?.azucar_perdida_t),
+      critical: sum((r) => r.alertas.filter((a) => a.nivel === "critico" && !a.resuelta).length),
     };
   }, [reports]);
 
   const burnRows = useMemo(() => {
     if (!reports) return [];
     return reports
-      .filter((r) => r.reporte.cana_pendiente_ton > 0 && r.reporte.derivados?.horas_desde_quema != null)
+      .filter((r) => r.reporte.cana_pendiente_ton > 0 && r.reporte.derivados?.horas_desde_quema != null && pendingOpen(r))
       .map((r) => ({
         id: r.id,
         lot: r.reporte.lote,
@@ -178,17 +193,25 @@ export default function Dashboard({ version, catalog, onNewNote }) {
   const allAlerts = useMemo(() => {
     if (!reports) return [];
     return reports
-      .flatMap((r) => r.alertas.map((a) => ({ ...a, reportado: r.reportado, id: r.id })))
+      .flatMap((r) => r.alertas.map((a, i) => ({ ...a, indice: a.indice ?? i, reportado: r.reportado, id: r.id })))
       .sort((a, b) => LEVEL_ORDER[a.nivel] - LEVEL_ORDER[b.nivel] || b.reportado.localeCompare(a.reportado));
   }, [reports]);
 
   const counts = useMemo(() => {
-    const c = { todas: allAlerts.length, critico: 0, aviso: 0, info: 0 };
-    allAlerts.forEach((a) => { c[a.nivel] += 1; });
+    const c = { todas: 0, critico: 0, aviso: 0, info: 0, resueltas: 0 };
+    allAlerts.forEach((a) => {
+      if (a.resuelta) { c.resueltas += 1; return; }
+      c.todas += 1;
+      c[a.nivel] += 1;
+    });
     return c;
   }, [allAlerts]);
 
-  const filtered = allAlerts.filter((a) => filter === "todas" || a.nivel === filter);
+  const filtered = allAlerts.filter((a) =>
+    filter === "resueltas" ? a.resuelta : !a.resuelta && (filter === "todas" || a.nivel === filter));
+  // los errores los muestra el propio control, junto al botón que se tocó
+  const resolveAlert = (a, note) => api.resolve(a.id, a.indice, note).then(load);
+  const reopenAlert = (a) => api.reopen(a.id, a.indice).then(load);
   const visibleAlerts = showAllAlerts ? filtered : filtered.slice(0, ALERT_CAP);
 
   const worst = burnRows[0];
@@ -285,7 +308,10 @@ export default function Dashboard({ version, catalog, onNewNote }) {
               </button>
             ))}
           </div>
-          <AlertList alerts={visibleAlerts} showMeta empty={reports?.length ? "No hay alertas con este filtro." : "Las alertas de cada reporte guardado aparecen aquí."} />
+          <AlertList alerts={visibleAlerts} showMeta onResolve={resolveAlert} onReopen={reopenAlert}
+                     empty={!reports?.length ? "Las alertas de cada reporte guardado aparecen aquí."
+                       : filter === "resueltas" ? "Todavía no se ha cerrado ninguna alerta."
+                       : "No hay alertas abiertas con este filtro."} />
           {filtered.length > ALERT_CAP && (
             <button type="button" className="btn btn-secondary full" onClick={() => setShowAllAlerts(!showAllAlerts)}>
               {showAllAlerts ? "Ver menos" : `Ver las ${filtered.length}`}
@@ -310,7 +336,7 @@ export default function Dashboard({ version, catalog, onNewNote }) {
               <thead>
                 <tr>
                   <th>Recibida</th><th>Lote</th><th>Corte</th><th className="num">Cortada</th><th className="num">Cortadores</th>
-                  <th>Quema</th><th className="num">Pendiente</th><th>Paros</th><th>Incidentes</th><th aria-label="Acciones" />
+                  <th>Quema</th><th className="num">Pendiente</th><th>Paros</th><th>Incidentes</th><th>Alertas</th><th aria-label="Acciones" />
                 </tr>
               </thead>
               <tbody>
@@ -330,11 +356,24 @@ export default function Dashboard({ version, catalog, onNewNote }) {
                         <Cell label="Pendiente" numeric value={x.cana_pendiente_ton != null && <>{fmt(x.cana_pendiente_ton)}<small> t</small></>} />
                         <Cell label="Paros" value={x.paros.length > 0 && describeStops(x.paros)} />
                         <Cell label="Incidentes" value={x.incidentes.length > 0 && x.incidentes.map((i) => INCIDENT_LABEL[i] ?? i).join(", ")} />
+                        <Cell label="Alertas" value={alertStatus(r.alertas)} />
                         <td className="row-action"><DeleteButton onConfirm={() => api.remove(r.id).then(load)} /></td>
                       </tr>
                       {open && (
                         <tr className="note-row">
-                          <td colSpan={10}><blockquote>{r.texto}</blockquote></td>
+                          <td colSpan={11}>
+                            <blockquote>{r.texto}</blockquote>
+                            {r.alertas.some((a) => a.resuelta) && (
+                              <ul className="closure-list">
+                                {r.alertas.filter((a) => a.resuelta).map((a) => (
+                                  <li key={a.indice}>
+                                    <span className="status status-done">Resuelta {shortDate(a.resuelta)}</span>
+                                    <span>{a.mensaje}{a.nota_cierre && <> — <em>«{a.nota_cierre}»</em></>}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </td>
                         </tr>
                       )}
                     </Fragment>

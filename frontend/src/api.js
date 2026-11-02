@@ -26,6 +26,8 @@ export const api = {
   save: (data) => request("/api/reportes", post(data)),
   reports: () => request("/api/reportes"),
   remove: (id) => request(`/api/reportes/${id}`, { method: "DELETE" }),
+  resolve: (id, index, nota) => request(`/api/reportes/${id}/alertas/${index}/resolver`, post({ nota })),
+  reopen: (id, index) => request(`/api/reportes/${id}/alertas/${index}/resolver`, { method: "DELETE" }),
   transcribe: (blob) => {
     const form = new FormData();
     form.append("audio", blob, "nota.webm");

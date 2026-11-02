@@ -306,6 +306,7 @@ input::-webkit-calendar-picker-indicator { opacity: 0.55; cursor: pointer; }
 .segmented button:hover { color: var(--text); }
 .segmented button.on { background: var(--surface); border-color: var(--border); color: var(--text); font-weight: 500; }
 .segmented.small button { height: 26px; padding: 0 10px; font-size: 13px; }
+.alerts-panel .segmented { flex-wrap: wrap; max-width: 100%; }
 .segmented .count { color: var(--muted); margin-left: 2px; font-weight: 400; }
 .control-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
@@ -439,6 +440,14 @@ dd.bad small { color: var(--negative); opacity: 0.8; }
 .alert-row:first-child { border-top: none; padding-top: 0; }
 .alert-row .pill { justify-self: start; }
 .alert-meta { display: block; margin-top: 2px; font-size: var(--fs-small); color: var(--muted); }
+.resolve-link { display: inline-block; margin-top: 6px; font-size: var(--fs-small); }
+.resolve-form { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.resolve-form textarea { width: 100%; font: inherit; font-size: var(--fs-small); padding: 6px 8px; resize: vertical; }
+.resolve-actions { display: flex; align-items: center; gap: 10px; }
+.btn.small { padding: 4px 10px; font-size: var(--fs-small); }
+.resolved-meta { display: block; margin-top: 4px; font-size: var(--fs-small); color: var(--accent); }
+.alert-row.is-resolved .alert-text { color: var(--muted); }
+.alert-row.is-resolved .pill { opacity: 0.55; }
 
 .field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
@@ -579,6 +588,11 @@ td.num { white-space: nowrap; }
 .reports-table tr.open { background: var(--raised); }
 .row-action { width: 40px; text-align: right; }
 .note-row td { background: var(--raised); padding-top: 0; }
+.status { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; white-space: nowrap; }
+.status-open { background: var(--warning-zone); color: var(--warning); }
+.status-done { background: var(--accent-soft); color: var(--accent); }
+.closure-list { list-style: none; margin: 10px 0 2px; padding: 0; display: grid; gap: 6px; font-size: 13px; max-width: 80ch; }
+.closure-list li { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
 .note-row blockquote { margin: 0; padding: 4px 0 4px 12px; border-left: 2px solid var(--control); font-size: 15px; line-height: 22px; max-width: 80ch; }
 .metrics-table td:first-child { min-width: 260px; }
 .metrics-table td:first-child .muted { display: block; font-size: 13px; line-height: 18px; margin-top: 2px; }

@@ -25,6 +25,14 @@ CREATE TABLE IF NOT EXISTS reportes (
     traza_json TEXT NOT NULL,
     confirmado INTEGER DEFAULT 0
 );
+-- cierre de alertas por el jefe de cosecha (la alerta no se borra: queda el registro de quién la cerró y por qué)
+CREATE TABLE IF NOT EXISTS resoluciones (
+    reporte_id INTEGER NOT NULL,
+    indice INTEGER NOT NULL,
+    resuelta TEXT NOT NULL,
+    nota TEXT,
+    PRIMARY KEY (reporte_id, indice)
+);
 """
 
 
@@ -68,14 +76,33 @@ def listar(limite: int = 200) -> list[dict]:
     with conexion() as con:
         filas = con.execute("SELECT * FROM reportes ORDER BY reportado DESC, id DESC LIMIT ?",
                             (limite,)).fetchall()
-    return [_fila(r) for r in filas]
+        cierres = {(c["reporte_id"], c["indice"]): c for c in con.execute("SELECT * FROM resoluciones")}
+    salida = [_fila(r) for r in filas]
+    for r in salida:
+        for i, a in enumerate(r["alertas"]):
+            c = cierres.get((r["id"], i))
+            a.update(indice=i, resuelta=c["resuelta"] if c else None, nota_cierre=c["nota"] if c else None)
+    return salida
+
+
+def resolver(id_: int, indice: int, nota: str | None) -> None:
+    with conexion() as con:
+        con.execute("INSERT OR REPLACE INTO resoluciones VALUES (?,?,?,?)",
+                    (id_, indice, datetime.now().isoformat(timespec="seconds"), nota or None))
+
+
+def reabrir(id_: int, indice: int) -> None:
+    with conexion() as con:
+        con.execute("DELETE FROM resoluciones WHERE reporte_id = ? AND indice = ?", (id_, indice))
 
 
 def borrar(id_: int) -> None:
     with conexion() as con:
         con.execute("DELETE FROM reportes WHERE id = ?", (id_,))
+        con.execute("DELETE FROM resoluciones WHERE reporte_id = ?", (id_,))
 
 
 def vaciar() -> None:
     with conexion() as con:
         con.execute("DELETE FROM reportes")
+        con.execute("DELETE FROM resoluciones")

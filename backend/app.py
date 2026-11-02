@@ -26,6 +26,10 @@ class Nota(BaseModel):
     reportado: str | None = None
 
 
+class Cierre(BaseModel):
+    nota: str | None = Field(None, max_length=500)
+
+
 class Guardar(BaseModel):
     texto: str
     reportado: str
@@ -92,6 +96,19 @@ def api_guardar(datos: Guardar):
 @app.get("/api/reportes")
 def api_listar():
     return almacen.listar()
+
+
+@app.post("/api/reportes/{id_}/alertas/{indice}/resolver")
+def api_resolver(id_: int, indice: int, cierre: Cierre):
+    """El jefe de cosecha confirma que la alerta se atendió; la nota de cierre es opcional."""
+    almacen.resolver(id_, indice, (cierre.nota or "").strip())
+    return {"ok": True}
+
+
+@app.delete("/api/reportes/{id_}/alertas/{indice}/resolver")
+def api_reabrir(id_: int, indice: int):
+    almacen.reabrir(id_, indice)
+    return {"ok": True}
 
 
 @app.delete("/api/reportes/{id_}")
