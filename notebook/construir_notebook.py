@@ -294,20 +294,23 @@ celdas.append(md("""**Fallas del sistema final y cómo se abordaron (o abordarí
 
 ## 8. Conclusiones
 
-* **Desempeño final (It6, test):** F1 por campo ≈ 0.98, 88 % de notas completamente correctas, F1 de alertas
+* **Desempeño final (It6, test):** F1 por campo ≈ 0.97, 85 % de notas completamente correctas, F1 de alertas
   ≈ 0.97 y tasa de alucinación ≈ 1 %, con ~1.1 s por nota y un costo estimado de ~US$ 0.25 por cada 1 000
-  reportes. Contra el baseline sin LLM (F1 0.82, 30 % de notas exactas), el sistema resuelve justo lo que las
+  reportes. Contra el baseline sin LLM (F1 0.82, 32 % de notas exactas), el sistema resuelve justo lo que las
   reglas no pueden: números en letras, horas coloquiales, cuadrillas, ambigüedad de lote e intentos de inyección.
 * **Un LLM con un prompt ingenuo fue peor que el regex** (It1: F1 0.75): sin reglas de anotación el modelo deja
   vacíos el tipo de corte y el día de la quema, e incluso marca un reporte válido con inyección como fuera de tema.
   La mayor ganancia vino de **especificar la tarea** (reglas + catálogo + esquema estricto), no de cambiar de modelo.
-* **Los ejemplos ayudan, pero no gratis:** los few-shot fijos subieron las notas normales (0.75 → 0.90 exactas, sobre las 60 notas)
-  y bajaron las difíciles (0.92 → 0.75); recuperarlos por similitud mejoró las adversariales
-  (0.75 → 0.88) y la aclaración del prompt v3 devolvió las difíciles a 0.92.
-* **El ajuste en dev se nota más en dev que en test** (It6: 0.994 vs 0.976): separar los splits evitó
-  sobreestimar la mejora del prompt v3.
-* **Elección del modelo:** sobre la misma muestra de 18 notas, Flash-Lite (F1 0.986, 89 % exactas), Gemma 4
-  26B MoE de pesos abiertos (F1 0.993, 94 %) y Gemini Flash (F1 0.986, 94 %) difieren en **una sola nota**: con
+* **Los ejemplos ayudan, pero no gratis:** los few-shot fijos subieron las notas normales (0.72 → 0.88 exactas, sobre las 60 notas)
+  y bajaron las difíciles (0.75 → 0.58); recuperarlos por similitud mejoró las adversariales
+  (0.75 → 0.88) y la aclaración del prompt v3 devolvió las difíciles a 0.75.
+* **El ajuste en dev no se quedó en dev** (It6: 0.975 en dev y 0.974 en test): separar los splits permite
+  confirmar que la mejora del prompt v3 se sostiene en notas que no se usaron para ajustarlo.
+* **La validación humana cambió 3 referencias** (E013, E043 y E048) y agregó dos reglas a la guía (la medianoche
+  de un día es 00:00 del siguiente; si se nombran varios lotes pero los datos son de uno, se usa ese). El prompt v3
+  sigue la regla anterior en E043 y E048, por eso el F1 de test de It6 pasó de 0.976 a 0.974.
+* **Elección del modelo:** sobre la misma muestra de 18 notas, Flash-Lite (F1 0.979, 83 % exactas), Gemma 4
+  26B MoE de pesos abiertos (F1 0.986, 89 %) y Gemini Flash (F1 0.979, 94 %) difieren en **dos notas como mucho**: con
   n = 18 la diferencia no es concluyente. Flash-Lite se elige por costo (~4 veces más barato que Flash), latencia
   (~1.1 s frente a 1.6 s de Flash y ~26 s de Gemma en la API gratuita) y cuota (Flash: 20 solicitudes/día).
   Gemma, con la menor tasa de alucinación, sería la opción para correr localmente sin internet en el campo.

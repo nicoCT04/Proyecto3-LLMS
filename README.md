@@ -103,20 +103,20 @@ baseline y delimitadores): `python -m pytest tests -q`.
 <!-- RESULTADOS -->
 | It. | Cambio | n | F1 | Notas exactas | F1 alertas | Alucinación | Latencia (s) | US$ / 1000 |
 |---|---|---|---|---|---|---|---|---|
-| It0 | Baseline sin LLM: expresiones regulares y palabras clave | 40 | 0.819 | 30 % | 0.774 | 5.7 % | 0.00 | 0.00 |
-| It1 | Prompt simple, modo JSON sin esquema (zero-shot) | 40 | 0.752 | 15 % | 0.812 | 9.2 % | 0.98 | 0.08 |
-| It2 | Prompt detallado (reglas + catálogo + seguridad) y esquema estricto | 40 | 0.974 | 80 % | 1.000 | 2.3 % | 1.11 | 0.18 |
-| It3 | It2 + 4 ejemplos few-shot fijos | 40 | 0.970 | 82 % | 1.000 | 1.8 % | 1.13 | 0.24 |
-| It4 | It2 + 4 ejemplos few-shot elegidos por embeddings (coseno, top-4) | 40 | 0.974 | 88 % | 0.973 | 1.8 % | 1.32 | 0.24 |
-| It5 | It4 + validación contra catálogo y autocorrección del JSON | 40 | 0.974 | 88 % | 0.973 | 1.8 % | 1.32 | 0.24 |
-| It6 | It5 + prompt v3: aclaraciones de lote numérico y tipo de corte (análisis de errores en dev) | 40 | 0.976 | 88 % | 0.973 | 1.2 % | 1.14 | 0.25 |
-| It7 | Configuración de It6 con un modelo abierto (Gemma 4 26B MoE) | 40 | 0.970 | 88 % | 0.973 | 0.6 % | 30.96 | 0.00 |
-| It8 | Configuración de It6 con el modelo grande (gemini-3.5-flash, muestra de 18) | 18 | 0.986 | 94 % | 1.000 | 0.0 % | 1.64 | 0.95 |
+| It0 | Baseline sin LLM: expresiones regulares y palabras clave | 40 | 0.823 | 32 % | 0.774 | 5.0 % | 0.00 | 0.00 |
+| It1 | Prompt simple, modo JSON sin esquema (zero-shot) | 40 | 0.756 | 18 % | 0.812 | 8.3 % | 0.98 | 0.08 |
+| It2 | Prompt detallado (reglas + catálogo + seguridad) y esquema estricto | 40 | 0.971 | 78 % | 1.000 | 2.3 % | 1.11 | 0.18 |
+| It3 | It2 + 4 ejemplos few-shot fijos | 40 | 0.968 | 80 % | 1.000 | 1.8 % | 1.13 | 0.24 |
+| It4 | It2 + 4 ejemplos few-shot elegidos por embeddings (coseno, top-4) | 40 | 0.971 | 85 % | 0.973 | 1.8 % | 1.32 | 0.24 |
+| It5 | It4 + validación contra catálogo y autocorrección del JSON | 40 | 0.971 | 85 % | 0.973 | 1.8 % | 1.32 | 0.24 |
+| It6 | It5 + prompt v3: aclaraciones de lote numérico y tipo de corte (análisis de errores en dev) | 40 | 0.974 | 85 % | 0.973 | 1.2 % | 1.14 | 0.25 |
+| It7 | Configuración de It6 con un modelo abierto (Gemma 4 26B MoE) | 40 | 0.967 | 85 % | 0.973 | 0.6 % | 30.96 | 0.00 |
+| It8 | Configuración de It6 con el modelo grande (gemini-3.5-flash, muestra de 18) | 18 | 0.979 | 94 % | 1.000 | 0.0 % | 1.64 | 0.95 |
 <!-- /RESULTADOS -->
 
 It8 se evaluó sobre una muestra de 18 notas de test porque el tier gratuito limita `gemini-3.5-flash` a 20
-solicitudes por día. Sobre **esas mismas 18 notas**, Flash-Lite (It6) obtiene F1 0.986 y 89 % de notas exactas,
-Gemma 4 (It7) F1 0.993 y 94 %, y Flash (It8) F1 0.986 y 94 %: difieren en una sola nota. Por eso el sistema usa
+solicitudes por día. Sobre **esas mismas 18 notas**, Flash-Lite (It6) obtiene F1 0.979 y 83 % de notas exactas,
+Gemma 4 (It7) F1 0.986 y 89 %, y Flash (It8) F1 0.979 y 94 %: difieren en dos notas como mucho. Por eso el sistema usa
 Flash-Lite: misma calidad, ~4 veces más barato que Flash y ~1.1 s por nota (`reports/comparacion_modelos_muestra.csv`).
 
 Métricas: F1 micro por campo (lote, tipo de corte, toneladas, cortadores, día y hora de quema, caña pendiente,
